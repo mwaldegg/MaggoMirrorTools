@@ -3,10 +3,10 @@
 # https://github.com/mwaldegg/yi-hack
 
 # Add cronjob:
-# @reboot @reboot sleep 60 && /home/pi/MaggoMirrorTools/yi_motion_mirror.sh >> /home/pi/yi_motion_mirror.log 2>&1
+# @reboot sleep 60 && /home/pi/MaggoMirrorTools/yi_motion_mirror.sh >> /home/pi/yi_motion_mirror.log 2>&1
 
 
-laststate="off"
+laststate="on"
 
 while [ 1 -eq 1 ]
 do
