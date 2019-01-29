@@ -17,7 +17,7 @@ do
 		echo "No motion detected"
         	if [ $laststate == "on" ]; then
             		echo "Turning off Mirror"
-           		wget 'http://localhost:8080/remote?action=MONITOROFF' -q > /dev/null 2>&1 #Disable MagicMirror
+           		wget -qO- 'http://localhost:8080/remote?action=MONITOROFF' > /dev/null 2>&1 #Disable MagicMirror
         	fi
         	laststate="off"
 		sleep 10
@@ -25,7 +25,7 @@ do
 		echo "Motion detected: $motion"
 		if [ $laststate == "off" ]; then
 			echo "Turning on Mirror"
-			wget 'http://localhost:8080/remote?action=MONITORON' -q > /dev/null 2>&1 #Enable MagicMirror
+			wget -qO- 'http://localhost:8080/remote?action=MONITORON' > /dev/null 2>&1 #Enable MagicMirror
 		fi
 		laststate="on"
 		sleep 10
