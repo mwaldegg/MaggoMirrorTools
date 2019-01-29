@@ -5,6 +5,7 @@
 # Add cronjob:
 # @reboot @reboot sleep 60 && /home/pi/MaggoMirrorTools/yi_motion_mirror.sh >> /home/pi/yi_motion_mirror.log 2>&1
 
+laststate="off"
 
 while [ 1 -eq 1 ]
 do
