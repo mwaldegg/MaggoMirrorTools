@@ -12,7 +12,7 @@ while [ 1 -eq 1 ]
 do
 
 	motion=$(wget -qO- http://192.168.200.152/motion)
-
+	echo -n "$(date) "
 	if [ -z "$motion" ]; then
 		echo "No motion detected"
         	if [ $laststate == "on" ]; then
@@ -20,7 +20,7 @@ do
            		wget -qO- 'http://localhost:8080/remote?action=MONITOROFF' > /dev/null 2>&1 #Disable MagicMirror
         	fi
         	laststate="off"
-		sleep 4
+		sleep 5
 	else
 		echo "Motion detected: $motion"
 		if [ $laststate == "off" ]; then
