@@ -5,6 +5,9 @@
 # Add cronjob:
 # @reboot sleep 60 && /home/pi/MaggoMirrorTools/hue_motion_mirror.sh >> /home/pi/hue_motion_mirror.log 2>&1
 
+#clear logfile
+test -f /home/pi/hue_motion_mirror.log && > /home/pi/hue_motion_mirror.log
+
 laststate="on"
 
 while [ 1 -eq 1 ]
