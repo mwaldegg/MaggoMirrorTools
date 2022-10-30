@@ -1,0 +1,8 @@
+# m h  dom mon dow   command
+@reboot sleep 60 && /home/pi/MaggoMirrorTools/hue_motion_mirror.sh >> /home/pi/hue_motion_mirror.log 2>&1
+@reboot rm -rf /home/pi/.pm2/logs/*
+
+#Reboot daily
+0 1 * * * sudo reboot
+
+
